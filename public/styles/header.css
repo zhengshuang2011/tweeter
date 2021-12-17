@@ -1,0 +1,35 @@
+.main-header {
+  margin-top: 6.2rem;
+  background-color: #eba417;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  height: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile {
+  height: 250px;
+}
+
+.username {
+  color: #ffff;
+  font-weight: 400;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-header {
+    margin: 11rem 2rem;
+    max-width: 550px;
+    height: 320px;
+    position: sticky;
+    top: 150px;
+  }
+  .profile {
+    height: 200px;
+  }
+}

@@ -1,0 +1,59 @@
+nav {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  /* background-color: #4056a1; */
+  background-color: #eba417;
+  /* background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png"); */
+  color: #ffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 2.3rem;
+  font-family: "Bungee", cursive;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.nav-content {
+  margin-right: 1.5rem;
+  margin-bottom: 0.2rem;
+}
+.nav-icon {
+  color: red;
+  margin-left: 5.3rem;
+  cursor: pointer;
+  animation: updown 1.5s ease infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0rem);
+  }
+
+  50% {
+    transform: translateY(-0.5rem);
+  }
+
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav {
+    background-color: #4056a1;
+  }
+}

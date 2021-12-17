@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,8 +20,34 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#myBtn i {
+  position: fixed;
+  color: red;
+  font-size: 3.5rem;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+    column-gap: 30px;
+  }
+  .container {
+    margin-top: 8rem;
+  }
+}
