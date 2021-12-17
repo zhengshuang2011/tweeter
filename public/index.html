@@ -1,29 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" name="top">
   <head>
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
+
+    <!--Font CSS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav CSS-->
+    <link rel="stylesheet" href="./styles/nav.css" type="text/css" />
+    <!-- Header CSS-->
+    <link rel="stylesheet" href="./styles/header.css" type="text/css" />
+    <!-- New-tweet CSS-->
+    <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    <!-- Article CSS-->
+    <link rel="stylesheet" href="./styles/article.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/91ad631787.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./scripts/composer-char-counter.js"></script>
+
+    <!--Timeago-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>tweeter</span>
+      <span class="nav-logo">tweeter</span>
+      <div>
+        <p class="nav-content"><b>Write</b> a new tweet</p>
+        <i class="fas fa-angle-double-down nav-icon"></i>
+      </div>
     </nav>
+    <div class="grid--1x2">
+      <header class="main-header">
+        <div>
+          <img class="profile" src="/images/profile-hex.png" />
+        </div>
+        <div>
+          <h2 class="username"><b>Miranda</b> Zheng</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section hidden class="new-tweet">
+          <form class="new-tweet-form" action="/tweets" method="POST">
+            <div class="alert">
+              <p class="error-message1">Please enter something!</p>
+              <p class="error-message2">
+                <i class="fas fa-exclamation-triangle"></i> Too long. Plz repct
+                our arbitrary limit of 140 chars. #kthxbye.
+                <i class="fas fa-exclamation-triangle"></i>
+              </p>
+            </div>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div class="container-bottom">
+              <button class="new-tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <div class="tweets-container"></div>
+      </main>
+    </div>
+    <a href="#top" id="myBtn" title="Go to Top" hidden>
+      <i class="fas fa-arrow-circle-up"></i>
+    </a>
   </body>
 </html>
