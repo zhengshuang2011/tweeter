@@ -46,13 +46,13 @@ nav {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
   nav {
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
   }
 }
 
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
   nav {
     background-color: #4056a1;
   }
